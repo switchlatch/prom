@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Harry Styles Promposal</title>
+	<style>
+		body {
+			background-color: pink;
+			font-family: Arial, sans-serif;
+		}
+		img {
+			float: left;
+			margin-right: 20px;
+			margin-bottom: 20px;
+		}
+		.text-box {
+			float: left;
+			margin-top: 50px;
+			padding: 20px;
+			background-color: white;
+			border-radius: 10px;
+		}
+		.btn {
+			display: inline-block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: white;
+			background-color: #333;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.btn-yes {
+			background-color: green;
+			margin-right: 10px;
+		}
+		.btn-no {
+			background-color: red;
+		}
+		#audio-player {
+			display: none;
+		}
+	</style>
+	<script>
+		function sayYes() {
+			alert("YAY!");
+			window.location.href = "Homepage.html";
+		}
+		function sayNo() {
+			document.body.style.backgroundColor = "red";
+			alert("WRONG ANSWER");
+			setTimeout(function() {
+				document.body.style.backgroundColor = "pink";
+			}, 1000);
+		}
+	</script>
+</head>
+<body>
+	<audio id="audio-player" autoplay loop>
+		<source src="matilda.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<img src="harrystyles.jpg" alt="Harry Styles" width="300">
+	<div class="text-box">
+	  <h2>&quot;Ello love, read this short poem made by yours truly: Jason Parra&quot; - Harry</h2>
+		<p>Let's dance like "Two Ghosts",<br>
+		Prom night will be the "Fine Line" host,<br>
+		"Watermelon Sugar" high on love's dose,<br>
+		Be my "Golden" date, beautiful "Adore"-able rose?</p>
+		<button class="btn btn-yes" onclick="sayYes()">Yes</button>
+		<button class="btn btn-no" onclick="sayNo()">No</button>
+	</div>
+</body>
+</html>

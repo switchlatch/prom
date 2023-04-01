@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Promposal</title>
+	<style>
+		body {
+			background-color: green;
+			font-family: Arial, sans-serif;
+		}
+		.text-box {
+			margin-top: 50px;
+			padding: 20px;
+			background-color: white;
+			border-radius: 10px;
+		}
+		.btn {
+			display: inline-block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: white;
+			background-color: #333;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.btn-yes {
+			background-color: green;
+			margin-right: 10px;
+		}
+		.btn-no {
+			background-color: red;
+		}
+	</style>
+	<script>
+		function sayYes() {
+			alert("YAY!");
+			window.location.href = "Homepage.html";
+		}
+		function sayNo() {
+			document.body.style.backgroundColor = "red";
+			alert("WRONG ANSWER");
+			setTimeout(function() {
+				document.body.style.backgroundColor = "green";
+			}, 1000);
+		}
+	</script>
+</head>
+<body>
+	<div class="text-box">
+	  <h2>A Classic Promposal</h2>
+		<p>Roses are red, violets are blue (lol so cheesy)<br>
+		You're the one I want to go to prom with, it's true<br>
+		Dancing under the stars, hand in hand<br>
+		Will you go to prom with me, to the most classic prom in the land?</p>
+		<button class="btn btn-yes" onclick="sayYes()">Yes</button>
+		<button class="btn btn-no" onclick="sayNo()">No</button>
+	</div>
+</body>
+</html>
